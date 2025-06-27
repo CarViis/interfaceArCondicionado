@@ -3,6 +3,6 @@
 </script>
 <h1>teste</h1>
 <footer>
-    <p>Feito por INFO 4M</p>
-    <p>Por Carlos e Erick</p>
+    <p>© 2024 INFO 4M. All rights reserved.</p>
+    <p>Created by INFO 4M</p>
 </footer>
