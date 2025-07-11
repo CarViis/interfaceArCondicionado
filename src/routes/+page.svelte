@@ -1,5 +1,5 @@
 <script>
-	import Cabecalho from "$lib/componentes/Cabecalho.svelte";
-
+	import Cabecalho from '$lib/componentes/Cabecalho.svelte';
 </script>
-<Cabecalho>igjroigjrojgtr</Cabecalho>
+
+<Cabecalho />
