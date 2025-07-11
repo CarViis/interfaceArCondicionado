@@ -6,6 +6,7 @@
 	}
 </script>
 
+
 <TabBar/>
 <Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
 <Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
