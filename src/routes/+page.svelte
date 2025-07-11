@@ -3,7 +3,6 @@
 	import Button from '@smui/button';
 	import Tab, { Label } from '@smui/tab';
 	import TabBar from '@smui/tab-bar';
-	import Fab, { Icon } from '@smui/fab';
 	import { mdiPlus } from '@mdi/js';
 	function cliquei() {
 		alert('Você clicou no botão!');
