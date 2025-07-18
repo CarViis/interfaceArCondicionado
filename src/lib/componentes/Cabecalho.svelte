@@ -6,11 +6,22 @@
 	}
 </script>
 
-
-<TabBar/>
-<Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
-<Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
+<div class="cabecalho-container">
+    <img src="src/lib/componentes/IFRN-Logo.png" alt="Logo" />
+    <TabBar/>
+</div>
+<!-- <Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
+<Button onclick={cliquei} variant="raised" color="primary">Teste</Button> -->
 <style>
+    img {
+        height: 50px;
+    }
+    .cabecalho-container {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+    }
+
     h1{
         color: orange
     }
