@@ -7,14 +7,14 @@
 </script>
 
 <div class="cabecalho-container">
-    <img src="src/lib/componentes/IFRN-Logo.png" alt="Logo" />
+    <img src="src/lib/Logo.png" alt="Logo" />
     <TabBar/>
 </div>
 <!-- <Button onclick={cliquei} variant="raised" color="primary">Teste</Button>
 <Button onclick={cliquei} variant="raised" color="primary">Teste</Button> -->
 <style>
     img {
-        height: 50px;
+        height: 50%;
     }
     .cabecalho-container {
         display: flex;
