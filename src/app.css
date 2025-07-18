@@ -1,6 +1,8 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/forms';
 @plugin '@tailwindcss/typography';
+<<<<<<< HEAD
+=======
 
 footer {
         text-align: center;
@@ -19,3 +21,4 @@ p {
 h1 {
         color: CCCCCC;
 }
+>>>>>>> 1715801026fd97de60e121c44ef0528ba12b5cef
