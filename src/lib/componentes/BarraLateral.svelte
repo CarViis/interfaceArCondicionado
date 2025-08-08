@@ -10,37 +10,10 @@
     <Content>
       <List>
         <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
+          <Text>Monitoramente</Text>
         </Item>
         <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
-          <Text>Gray Kittens</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'A Space Rocket')}>
-          <Text>A Space Rocket</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = '100 Pounds of Gravel')}>
-          <Text>100 Pounds of Gravel</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'All of the Shrimp')}>
-          <Text>All of the Shrimp</Text>
-        </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'A Planet with a Mall')}>
-          <Text>A Planet with a Mall</Text>
+          <Text>Programação</Text>
         </Item>
       </List>
     </Content>
