@@ -1,4 +1,3 @@
-
 <footer>
 <div class="Conteiner-Rodape">
 	<div class="Conteiner-Rodape-2">
@@ -54,12 +53,9 @@
 		color: white;
 		background-color: gray;
 		display: flex;
-		position: absolute;
-		bottom:auto;
-		width: 100%;
 		flex-direction: row;
 		justify-content: center;
-        align-items: center;
+		align-items: center;
         padding: 32px;
 	}
 	.Conteiner-Rodape {
