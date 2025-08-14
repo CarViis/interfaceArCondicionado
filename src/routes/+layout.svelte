@@ -7,20 +7,17 @@
 	let { children } = $props();
 </script>
 
-
-
 <div style="min-height: 100vh; display: flex; flex-direction: column;">
 	{#if $page.url.pathname !== '/programacao'}
-	<Cabecalho />
-  {/if}
+		<Cabecalho />
+	{/if}
 	<div style="flex: 1; display: flex; min-height: 0;">
 		<BarraLateral />
-    {@render children()}
 		<div style="flex: 1; overflow: auto;">
-			<slot />
+			{@render children()}
 		</div>
 	</div>
 	{#if $page.url.pathname !== '/programacao'}
-	<Rodape />
-  {/if}
+		<Rodape />
+	{/if}
 </div>
