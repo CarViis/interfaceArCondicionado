@@ -7,9 +7,7 @@
     { id: 1, label: 'Salas', permissao: true},
     { id: 2, label: 'Laboratorio', permissao: true},
     { id: 3, label: 'Auditório', permissao: true},
-    { id: 4, label: 'Administrativo', permissao: true},
-    { id: 5, label: 'Sala de Reuniões', permissao: true},
-    { id: 6, label: 'Sala de Descanso', permissao: true}
+    { id: 4, label: 'Administrativo', permissao: true}
   ];
 </script>
 <div>
@@ -25,22 +23,28 @@
   div {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  :global(.mdc-tab-bar) {
+    width: 100%;
+    min-width: 0;
+    justify-content: flex-start;
   }
   :global(.mdc-tab__text-label) {
-    font-size: 1.5rem; /* Aumente conforme necessário */
+    font-size: 1.08rem; /* agradável e legível */
+    white-space: nowrap;
   }
-   /* Cor da barra de seleção (indicator) */
+  :global(.mdc-tab) {
+    min-width: 110px;
+  }
   :global(.mdc-tab-indicator__content--underline) {
-    background-color: #2ecc40 !important; /* verde */
+    background-color: #2ecc40 !important;
   }
-
-  /* Cor do ripple (efeito de clique) */
   :global(.mdc-tab .mdc-tab__ripple) {
     --mdc-ripple-color: #2ecc40;
     --mdc-ripple-pressed-color: #27ae60;
   }
-
-  /* Cor do texto ativo */
   :global(.mdc-tab--active .mdc-tab__text-label) {
     color: #2ecc40 !important;
   }
