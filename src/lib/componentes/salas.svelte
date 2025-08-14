@@ -1,5 +1,6 @@
 <script lang="ts">
 import { onMount } from "svelte";
+import { goto } from "$app/navigation";
 
 type Sala = {
     id: string;
@@ -37,7 +38,7 @@ function diminuirTemp(i: number) {
 
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-6xl mx-auto my-8">
     {#each Salas as sala, i (sala.id)}
-        <div class="card">
+        <div class="card"  >
             <div class="card-header">
                 <h1 class="card-title">{sala.nome}</h1>
             </div>
@@ -58,7 +59,11 @@ function diminuirTemp(i: number) {
                         Desligado
                     {/if}
                 </span>
+                
             </div>
+            <button class="detalhes-btn" on:click={() => goto(`/programacao/${sala.id}`)}>
+                    Programar
+                </button>
         </div>
     {/each}
 </div>

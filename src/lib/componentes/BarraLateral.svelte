@@ -1,6 +1,7 @@
 <script lang="ts">
   import Drawer, { Content } from '@smui/drawer';
   import List, { Item, Text } from '@smui/list';
+  import { goto } from '$app/navigation';
 
   let clicked = $state('nothing yet');
 </script>
@@ -9,12 +10,12 @@
   <Drawer>
     <Content>
       <List>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
+        <Item href="javascript:void(0)" onclick={() => goto('/')}>
           <Text>Monitoramente</Text>
         </Item>
-        <Item href="javascript:void(0)" onclick={() => (clicked = 'Gray Kittens')}>
+        <!-- <Item href="javascript:void(0)" onclick={() => goto('/programacao')}>
           <Text>Programação</Text>
-        </Item>
+        </Item> -->
       </List>
     </Content>
   </Drawer>

@@ -70,31 +70,33 @@
     }
 </script>
 
-<table>
-    <thead>
-        <tr>
-            <th class="horario-coluna">Horário</th>
-            {#each dias as dia}
-                <th>{dia}</th>
-            {/each}
-        </tr>
-    </thead>
-    <tbody>
-        {#each horarios as horario, i}
-            <tr class={horario.intervalo ? "intervalo" : ""}>
-                <td class={horario.intervalo ? "intervalo-horario" : ""}>{horario.label}</td>
-                {#each dias as dia, j}
-                    {@const cell = status.find(s => s.row === i && s.column === j)}
-                    <td
-                        style="background-color: {cell ? cell.color : 'transparent'}; cursor: {cell && !cell.isInterval ? 'pointer' : 'default'}"
-                        on:click={() => cell && handleCellClick(cell)}
-                    >
-                    </td>
+<div class="flex justify-center mx-auto">
+    <table>
+        <thead>
+            <tr>
+                <th class="horario-coluna">Horário</th>
+                {#each dias as dia}
+                    <th>{dia}</th>
                 {/each}
             </tr>
-        {/each}
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            {#each horarios as horario, i}
+                <tr class={horario.intervalo ? "intervalo" : ""}>
+                    <td class={horario.intervalo ? "intervalo-horario" : ""}>{horario.label}</td>
+                    {#each dias as dia, j}
+                        {@const cell = status.find(s => s.row === i && s.column === j)}
+                        <td
+                            style="background-color: {cell ? cell.color : 'transparent'}; cursor: {cell && !cell.isInterval ? 'pointer' : 'default'}"
+                            on:click={() => cell && handleCellClick(cell)}
+                        >
+                        </td>
+                    {/each}
+                </tr>
+            {/each}
+        </tbody>
+    </table>
+</div>
 
 {#if showPopup && selectedCell}
     <div
