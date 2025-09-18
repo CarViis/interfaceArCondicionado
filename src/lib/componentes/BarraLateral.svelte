@@ -32,4 +32,5 @@
     flex-direction: column;
     overflow: hidden;
   }
+  
 </style>

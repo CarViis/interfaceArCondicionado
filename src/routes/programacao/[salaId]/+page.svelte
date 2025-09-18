@@ -5,12 +5,17 @@
 
     let salaId: string = '';
     $: salaId = String($page.params.salaId) ?? '';
+
+    function handleUpdated(event: CustomEvent) {
+        const { temperatura } = event.detail || {};
+        console.log('Temperatura padrão atualizada para', temperatura);
+    }
 </script>
 
 
 <div style="text-align: center;">
     <h2>Campus YYYYYYY - Sala {salaId}</h2>
-    <TempPadrao/>
+    <TempPadrao {salaId} on:updated={handleUpdated} />
 </div>
 <TabelaHorario/>
 
