@@ -61,7 +61,7 @@ function diminuirTemp(i: number) {
                 </span>
                 
             </div>
-            <a class="detalhes-btn" href="/programacao/${sala.id}" >
+            <a class="detalhes-btn" href="/programacao/{sala.id}" >
                     Programar
             </a>
         </div>
