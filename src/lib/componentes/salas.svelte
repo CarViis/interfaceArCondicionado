@@ -61,9 +61,9 @@ function diminuirTemp(i: number) {
                 </span>
                 
             </div>
-            <button class="detalhes-btn" on:click={() => goto(`/programacao/${sala.id}`)}>
+            <a class="detalhes-btn" href="/programacao/${sala.id}" >
                     Programar
-                </button>
+            </a>
         </div>
     {/each}
 </div>

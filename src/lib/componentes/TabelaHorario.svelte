@@ -37,9 +37,7 @@
                 id: id++,
                 row: i,
                 column: j,
-                color: horarios[i].intervalo
-                    ? "#bdbdbd"
-                    : (Math.random() > 0.5 ? "#8BC34A" : "#F44336"),
+                color: "#F44336",
                 isInterval: horarios[i].intervalo
             });
         }
@@ -51,7 +49,7 @@
     function handleCellClick(cell: StatusCell) {
         if (!cell.isInterval) {
             selectedCell = cell;
-            showPopup = true;
+            changeColor();
         }
     }
 
@@ -62,11 +60,6 @@
             showPopup = false;
             selectedCell = null;
         }
-    }
-
-    function closePopup() {
-        showPopup = false;
-        selectedCell = null;
     }
 </script>
 
@@ -98,31 +91,6 @@
     </table>
 </div>
 
-{#if showPopup && selectedCell}
-    <div
-        class="popup-overlay"
-        role="button"
-        tabindex="0"
-        aria-label="Fechar popup"
-        on:click={closePopup}
-        on:keydown={(e) => { if (e.key === 'Enter' || e.key === ' ') closePopup(); }}
-    >
-        <div
-            class="popup"
-            role="dialog"
-            aria-modal="true"
-            tabindex="0"
-            on:click|stopPropagation
-            on:keydown|stopPropagation
-        >
-            <p>Alterar cor da célula?</p>
-            <button on:click={changeColor}>
-                Mudar para {selectedCell.color === '#8BC34A' ? 'Vermelho' : 'Verde'}
-            </button>
-            <button on:click={closePopup}>Cancelar</button>
-        </div>
-    </div>
-{/if}
 
 <style>
 table {
@@ -158,39 +126,5 @@ tr.intervalo td.intervalo-horario {
 }
 tr:hover:not(.intervalo) {
     background-color: #f5f5f5;
-}
-.popup-overlay {
-    position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
-    background: rgba(0,0,0,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-}
-.popup {
-    background: #fff;
-    padding: 24px 18px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px #3333;
-    min-width: 220px;
-    text-align: center;
-}
-.popup button {
-    margin: 8px 6px 0 6px;
-    padding: 6px 16px;
-    border: none;
-    border-radius: 4px;
-    background: #e0e0e0;
-    cursor: pointer;
-    font-weight: bold;
-}
-.popup button:first-child {
-    background: #8BC34A;
-    color: #fff;
-}
-.popup button:last-child {
-    background: #F44336;
-    color: #fff;
 }
 </style>
