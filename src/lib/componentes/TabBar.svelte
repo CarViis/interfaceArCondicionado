@@ -23,6 +23,7 @@
   div {
     width: 100%;
     height: 100%;
+
     display: flex;
     align-items: center;
   }
@@ -47,5 +48,6 @@
   }
   :global(.mdc-tab--active .mdc-tab__text-label) {
     color: #2ecc40 !important;
+
   }
 </style>
