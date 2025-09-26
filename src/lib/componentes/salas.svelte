@@ -1,6 +1,5 @@
 <script lang="ts">
 import { onMount } from "svelte";
-import { goto } from "$app/navigation";
 
 type Sala = {
     id: string;
@@ -17,7 +16,7 @@ async function load() {
     try {
         const resposta = await fetch("https://6895f772039a1a2b2890fb37.mockapi.io/api/v1/Salas");
         const data = await resposta.json();
-        return data.map((sala: any) => ({ ...sala, ligado: false, temperatura: Number(sala.temperatura) || 22 })) as Sala[];
+        return data.map((sala: any) => ({ ...sala, ligado: false, temperatura: Number(sala.tem_atual) || 22 })) as Sala[];
     } catch (error) {
         console.error("Erro ao buscar salas:", error);
         return [];
@@ -28,11 +27,33 @@ onMount(async () => {
     Salas = await load();
 });
 
-function aumentarTemp(i: number) {
-    if (Salas[i].temperatura < 30) Salas[i].temperatura += 1;
+async function aumentarTemp(i: number) {
+    if (Salas[i].temperatura < 30) {
+        Salas[i].temperatura += 1;
+        await updateTemperature(Salas[i].id, Salas[i].temperatura);
+    }
 }
-function diminuirTemp(i: number) {
-    if (Salas[i].temperatura > 16) Salas[i].temperatura -= 1;
+
+async function diminuirTemp(i: number) {
+    if (Salas[i].temperatura > 16) {
+        Salas[i].temperatura -= 1;
+        await updateTemperature(Salas[i].id, Salas[i].temperatura);
+    }
+}
+
+async function updateTemperature(salaId: string, tem_atual: number) {
+    try {
+        const response = await fetch(`https://6895f772039a1a2b2890fb37.mockapi.io/api/v1/Salas/${salaId}`, {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({tem_atual})
+        });
+        if (!response.ok) {
+            throw new Error('Erro ao atualizar a temperatura na API');
+        }
+    } catch (error) {
+        console.error(`Erro ao atualizar a temperatura da sala ${salaId}:`, error);
+    }
 }
 </script>
 
