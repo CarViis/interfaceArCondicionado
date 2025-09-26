@@ -1,3 +1,4 @@
+
 <script lang="ts">
     import { createEventDispatcher } from 'svelte';
     export let salaId: string = '';
@@ -12,6 +13,7 @@
     function openPopup() {
         showPopup = true;
         loadCurrent();
+
     }
 
     function closePopup() {
@@ -70,6 +72,7 @@
             loading = false;
         }
     }
+
 </script>
 
 <button class="temp-button" id="tempButton" on:click={openPopup}> Configurar Temperatura Padrão </button>
@@ -125,4 +128,5 @@
         min-width: 300px;
         box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
+
 </style>

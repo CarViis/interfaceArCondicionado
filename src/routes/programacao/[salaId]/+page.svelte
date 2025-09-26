@@ -16,6 +16,7 @@
 <div style="text-align: center;">
     <h2>Campus YYYYYYY - Sala {salaId}</h2>
     <TempPadrao {salaId} on:updated={handleUpdated} />
+
 </div>
 <TabelaHorario/>
 

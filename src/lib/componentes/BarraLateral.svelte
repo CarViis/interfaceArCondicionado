@@ -10,7 +10,7 @@
   <Drawer>
     <Content>
       <List>
-        <Item href="javascript:void(0)" onclick={() => goto('/')}>
+        <Item href="/">
           <Text>Monitoramente</Text>
         </Item>
         <!-- <Item href="javascript:void(0)" onclick={() => goto('/programacao')}>
